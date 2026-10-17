@@ -2,7 +2,7 @@
 <h1 align="center">WaveCheck</h1>
 <p align="center"><b>Catches fake lossless. Research-grade, fully offline.</b></p>
 <p align="center">Audio Quality Analyzer · Windows 10/11 · x64 · ~7 MB · Free for personal use</p>
-<p align="center"><a href="https://github.com/tapatchUSA/WaveCheck/releases/latest"><b>⬇ Download WaveCheck 1.0.3</b></a> &nbsp;·&nbsp; <a href="https://tapatch.com/tools/wavecheck/">tapatch.com/tools/wavecheck</a></p>
+<p align="center"><a href="https://github.com/tapatchUSA/WaveCheck/releases/latest"><b>⬇ Download WaveCheck 1.0.4</b></a> &nbsp;·&nbsp; <a href="https://tapatch.com/tools/wavecheck/">tapatch.com/tools/wavecheck</a></p>
 
 <p align="center">
 <img src="screenshots/wavecheck-v1.0.0-home.png" alt="WaveCheck — Home"><br>
@@ -48,18 +48,16 @@ No network, no telemetry, no uploads. Analysis opens every file read-only and th
 
 - Patent-encumbered and niche formats with no production-quality pure-Rust decoder are detected and reported rather than guessed at — WMA, Musepack, Monkey's Audio (APE), TTA, WavPack, MPEG-4 ALS, and DST-compressed DSD. Transcode those to FLAC or WAV to analyze them. DSD (.dsf / .dff) decoding is verified against generated test signals; sanity-check the first few real files against a known-good source.
 
-## What's new in 1.0.3
+## What's new in 1.0.4
 
-- Now in 10 languages: English, Chinese (Simplified), Russian, Spanish, Portuguese, German, Japanese, French, Polish and Korean
-- Starts in your Windows language (English if yours isn't one of the 10). The first launch asks which language you want, and you can switch any time inside the app
-- The installer comes in the same 10 languages
-- The Terms of Service are shown translated for convenience, with the official English (US) text, the only binding version, right below
+- Now runs on any Windows 10 or 11 PC, even a fresh install: it no longer needs the Microsoft Visual C++ Redistributable (no more "VCRUNTIME140.dll was not found")
+- Nothing else changed
 
 Release notes for every version are on the [Releases](https://github.com/tapatchUSA/WaveCheck/releases) page and in [release-notes/](release-notes/).
 
 ## Install
 
-1. Download **WaveCheck-Setup-1.0.3.exe** from the [latest release](https://github.com/tapatchUSA/WaveCheck/releases/latest) or from [tapatch.com](https://tapatch.com/tools/wavecheck/).
+1. Download **WaveCheck-Setup-1.0.4.exe** from the [latest release](https://github.com/tapatchUSA/WaveCheck/releases/latest) or from [tapatch.com](https://tapatch.com/tools/wavecheck/).
 2. Run it. The installer and the app come in 10 languages.
 3. Accept the Terms of Service on first launch.
 
@@ -76,6 +74,7 @@ scoop install tapatch/wavecheck
 
 | Version | Released | Installer | VirusTotal | SHA-256 |
 |---|---|---|---|---|
+| [1.0.4](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.4) | 2026-10-17 | [WaveCheck-Setup-1.0.4.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.4/WaveCheck-Setup-1.0.4.exe) | [1 / 70](https://www.virustotal.com/gui/file/1552c83989d298bf4d5ad19b2ad449d80d77675d6083a63ca7ad98b6588ea21c/detection) | `1552c83989d298bf…` |
 | [1.0.3](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.3) | 2026-10-01 | [WaveCheck-Setup-1.0.3.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.3/WaveCheck-Setup-1.0.3.exe) | [1 / 71](https://www.virustotal.com/gui/file/66645d64c5d16cf30958ee5b8600eb72a08ef4a6bf4182376f4b45b9fc005c54/detection) | `66645d64c5d16cf3…` |
 | [1.0.2](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.2) | 2026-09-30 | [WaveCheck-Setup-1.0.2.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.2/WaveCheck-Setup-1.0.2.exe) | [2 / 69](https://www.virustotal.com/gui/file/2743474b0d380cbabcb0cab6e8fb49e2a488b17cb8f5fb4ba8884672680fd0b7/detection) | `2743474b0d380cba…` |
 | [1.0.1](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.1) | 2026-09-20 | [WaveCheck-Setup-1.0.1.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.1/WaveCheck-Setup-1.0.1.exe) | [2 / 70](https://www.virustotal.com/gui/file/039331b36e71d9360f781418af706a6386757f0a3c9a3e2547e091b2cf3f6a5e/detection) | `039331b36e71d936…` |
@@ -83,11 +82,11 @@ scoop install tapatch/wavecheck
 
 ## Security
 
-Every installer is scanned on VirusTotal before release. WaveCheck 1.0.3: **1 / 71** engines flag it · [view report](https://www.virustotal.com/gui/file/66645d64c5d16cf30958ee5b8600eb72a08ef4a6bf4182376f4b45b9fc005c54/detection)
+Every installer is scanned on VirusTotal before release. WaveCheck 1.0.4: **1 / 70** engines flag it · [view report](https://www.virustotal.com/gui/file/1552c83989d298bf4d5ad19b2ad449d80d77675d6083a63ca7ad98b6588ea21c/detection)
 
 **SHA-256**
 ```
-66645d64c5d16cf30958ee5b8600eb72a08ef4a6bf4182376f4b45b9fc005c54
+1552c83989d298bf4d5ad19b2ad449d80d77675d6083a63ca7ad98b6588ea21c
 ```
 
 ## Built with
