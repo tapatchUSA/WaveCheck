@@ -2,7 +2,7 @@
 <h1 align="center">WaveCheck</h1>
 <p align="center"><b>Catches fake lossless. Research-grade, fully offline.</b></p>
 <p align="center">Audio Quality Analyzer · Windows 10/11 · x64 · ~7 MB · Free for personal use</p>
-<p align="center"><a href="https://github.com/tapatchUSA/WaveCheck/releases/latest"><b>⬇ Download WaveCheck 1.0.5</b></a> &nbsp;·&nbsp; <a href="https://tapatch.com/tools/wavecheck/">tapatch.com/tools/wavecheck</a></p>
+<p align="center"><a href="https://github.com/tapatchUSA/WaveCheck/releases/latest"><b>⬇ Download WaveCheck 1.0.6</b></a> &nbsp;·&nbsp; <a href="https://tapatch.com/tools/wavecheck/">tapatch.com/tools/wavecheck</a></p>
 
 <p align="center">
 <img src="screenshots/wavecheck-v1.0.0-home.png" alt="WaveCheck — Home"><br>
@@ -48,17 +48,18 @@ No network, no telemetry, no uploads. Analysis opens every file read-only and th
 
 - Patent-encumbered and niche formats with no production-quality pure-Rust decoder are detected and reported rather than guessed at — WMA, Musepack, Monkey's Audio (APE), TTA, WavPack, MPEG-4 ALS, and DST-compressed DSD. Transcode those to FLAC or WAV to analyze them. DSD (.dsf / .dff) decoding is verified against generated test signals; sanity-check the first few real files against a known-good source.
 
-## What's new in 1.0.5
+## What's new in 1.0.6
 
-- Background pictures and GIFs: add as many as you like in Settings, tick the ones to show (or Select all), and the ticked ones take turns
-- Sliders set how strong the picture is and how see-through the panels are; turn it off any time
-- The installer's license text matches the current Terms, and THIRD-PARTY-NOTICES.txt lists the open-source parts it uses
+- A lossless file made from an MP3 or AAC now gets the verdict "Fake lossless" and loses 30 points, so it ranks below an honest MP3
+- A hi-res file upsampled from CD quality now gets the verdict "Fake hi-res" and loses 25 points
+- Folder scans count every fake in the "fake/bad" total, and CSV and JSON exports have fake_lossless and fake_hires columns
+- The zoomed spectrogram shows time in seconds and frequency in kHz with the cutoff line, and the arrows in the chart notes no longer show as boxes
 
 Release notes for every version are on the [Releases](https://github.com/tapatchUSA/WaveCheck/releases) page and in [release-notes/](release-notes/).
 
 ## Install
 
-1. Download **WaveCheck-Setup-1.0.5.exe** from the [latest release](https://github.com/tapatchUSA/WaveCheck/releases/latest) or from [tapatch.com](https://tapatch.com/tools/wavecheck/).
+1. Download **WaveCheck-Setup-1.0.6.exe** from the [latest release](https://github.com/tapatchUSA/WaveCheck/releases/latest) or from [tapatch.com](https://tapatch.com/tools/wavecheck/).
 2. Run it. The installer and the app come in 10 languages.
 3. Accept the Terms of Service on first launch.
 
@@ -75,7 +76,8 @@ scoop install tapatch/wavecheck
 
 | Version | Released | Installer | VirusTotal | SHA-256 |
 |---|---|---|---|---|
-| [1.0.5](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.5) | 2026-11-04 | [WaveCheck-Setup-1.0.5.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.5/WaveCheck-Setup-1.0.5.exe) | [1 / 71](https://www.virustotal.com/gui/file/aa50e1d19cbe3ab6834bd3c83700f3e7fd6321515ce3a0b39485d858aadfae6d/detection) | `aa50e1d19cbe3ab6…` |
+| [1.0.6](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.6) | 2026-11-07 | [WaveCheck-Setup-1.0.6.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.6/WaveCheck-Setup-1.0.6.exe) | [1 / 71](https://www.virustotal.com/gui/file/d1122e62f069da1b6828474053ae17f565b58a16e07a16e4fb208ed05fc8c8be/detection) | `d1122e62f069da1b…` |
+| [1.0.5](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.5) | 2026-11-05 | [WaveCheck-Setup-1.0.5.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.5/WaveCheck-Setup-1.0.5.exe) | [1 / 71](https://www.virustotal.com/gui/file/aa50e1d19cbe3ab6834bd3c83700f3e7fd6321515ce3a0b39485d858aadfae6d/detection) | `aa50e1d19cbe3ab6…` |
 | [1.0.4](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.4) | 2026-10-17 | [WaveCheck-Setup-1.0.4.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.4/WaveCheck-Setup-1.0.4.exe) | [0 / 71](https://www.virustotal.com/gui/file/1552c83989d298bf4d5ad19b2ad449d80d77675d6083a63ca7ad98b6588ea21c/detection) | `1552c83989d298bf…` |
 | [1.0.3](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.3) | 2026-10-01 | [WaveCheck-Setup-1.0.3.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.3/WaveCheck-Setup-1.0.3.exe) | [0 / 71](https://www.virustotal.com/gui/file/66645d64c5d16cf30958ee5b8600eb72a08ef4a6bf4182376f4b45b9fc005c54/detection) | `66645d64c5d16cf3…` |
 | [1.0.2](https://github.com/tapatchUSA/WaveCheck/releases/tag/v1.0.2) | 2026-09-30 | [WaveCheck-Setup-1.0.2.exe](https://github.com/tapatchUSA/WaveCheck/releases/download/v1.0.2/WaveCheck-Setup-1.0.2.exe) | [0 / 71](https://www.virustotal.com/gui/file/2743474b0d380cbabcb0cab6e8fb49e2a488b17cb8f5fb4ba8884672680fd0b7/detection) | `2743474b0d380cba…` |
@@ -84,11 +86,11 @@ scoop install tapatch/wavecheck
 
 ## Security
 
-Every installer is scanned on VirusTotal before release. WaveCheck 1.0.5: **1 / 71** engines flag it · [view report](https://www.virustotal.com/gui/file/aa50e1d19cbe3ab6834bd3c83700f3e7fd6321515ce3a0b39485d858aadfae6d/detection)
+Every installer is scanned on VirusTotal before release. WaveCheck 1.0.6: **1 / 71** engines flag it · [view report](https://www.virustotal.com/gui/file/d1122e62f069da1b6828474053ae17f565b58a16e07a16e4fb208ed05fc8c8be/detection)
 
 **SHA-256**
 ```
-aa50e1d19cbe3ab6834bd3c83700f3e7fd6321515ce3a0b39485d858aadfae6d
+d1122e62f069da1b6828474053ae17f565b58a16e07a16e4fb208ed05fc8c8be
 ```
 
 ## Built with
